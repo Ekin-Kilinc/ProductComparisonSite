@@ -1,0 +1,196 @@
+{%extends "master.html" %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block baslik %} Anasayfa {% endblock %}
+
+{% block govde %}
+
+
+<div class="container my-5">
+    <h1 class="text-center">Popüler Ürünler</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img width="168px" src="{% static 'kulaklik.jpg' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Kulak Üstü Bluetooth Kulaklık</h5>
+                    <p class="card-text">Ürünün açıklaması.</p>
+                    <a href="#" class="btn btn-secondary">Detaylar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img width="178px" src="{% static 'canta.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">El Çantası</h5>
+                    <p class="card-text">Ürünün açıklaması.</p>
+                    <a href="#" class="btn btn-secondary">Detaylar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img width="178px" src="{% static 'ayakkabi.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Çocuk Ayakkabısı</h5>
+                    <p class="card-text">Ürünün açıklaması.</p>
+                    <a href="#" class="btn btn-secondary">Detaylar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+        <h1 class="text-center">Ürün Kategorileri</h1>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Elektronik Ürünler</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Giyim ve Moda</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ev ve Bahçe Ürünleri</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kırtasiye Ürünleri</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Makyaj Malzemeleri</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kitaplar ve Eğitim</h5>
+                            <a href="#" class="btn btn-warning">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+
+
+<div class="container mt-5">
+        <h1 class="text-center">Ürün Markaları</h1>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">A Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">B Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">C Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">D Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">E Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">F Markası</h5>
+                            <a href="#" class="btn btn-secondary">Tümünü Gör</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>İletişim Bilgileri</h2>
+            <p>İletişim bilgilerinizi buraya ekleyebilirsiniz.</p>
+            <ul>
+                <li>Adres: Adres, Şehir, Ülke</li>
+                <li>Telefon: +1 123 456 789</li>
+                <li>E-posta: info@example.com</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>Bize Ulaşın</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="ad" class="form-label">Adınız</label>
+                    <input type="text" class="form-control" id="ad" placeholder="Adınızı girin">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-posta Adresiniz</label>
+                    <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin">
+                </div>
+                <div class="mb-3">
+                    <label for="mesaj" class="form-label">Mesajınız</label>
+                    <textarea class="form-control" id="mesaj" rows="4" placeholder="Mesajınızı buraya girin"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Gönder</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+{% endblock %}

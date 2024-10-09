@@ -1,0 +1,66 @@
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block baslik %} Yeni ürün ekle {% endblock %}
+{% block govde %}
+<div class="container my-5">
+    <form class="row g-3 pt-4" method="post" action="yeniurun" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="ad" class="form-label">Ürün Adı</label>
+            <input type="text" class="form-control" id="ad" name="ad">
+        </div>
+        <div class="col-md-6">
+            <label for="fiyat" class="form-label">Ürün Fiyatı</label>
+            <input type="text" class="form-control" id="fiyat" name="fiyat">
+        </div>
+        <div class="col-12">
+            <label for="formFile" class="form-label">Ürün Resmi:</label>
+            <input class="form-control" type="file" id="formFile" name="urunResmi" accept=".jpg, .png, .jpeg">
+        </div>
+        <div class="col-md-6">
+            <label for="urunno" class="form-label">Ürün No</label>
+            <input type="number" class="form-control" id="urunno" name="urunno">
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="stokdurumu" name="stokdurumu">
+                <label class="form-check-label" for="stokdurumu"> Stokta
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-warning">KAYDET</button>
+        </div>
+    </form>
+
+    {% if yeniKayit == "True" %}
+        <div class="row pt-4" style="padding-left:10px;padding-right:10px">
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <div style ="padding-left:5px">
+                    Yeni ürün başarıyla eklendi.
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% for hata in hatalistesi %}
+        {% if forloop.counter == 1 %}
+        <div class="row pt-3" style="padding-left: 10px; padding-right: 10px">
+        {% else %}
+        <div class="row pt-1" style="padding-left: 10px; padding-right: 10px">
+        {% endif %}
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <div style="padding-left: 5px">
+                        {{ hata }}
+                    </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+</div>
+{% endblock %}

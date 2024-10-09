@@ -1,0 +1,26 @@
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% load static %}
+{% block baslik %} Ürün Detayı {% endblock %}
+
+{% block govde %}
+<div class="container my-5">
+     <form class="row g-3 pt-4" method="post" action="" >
+            <div class="col-md-12">
+                <img src="{{urun.urunResmi2}}" height="200px">
+            </div>
+
+            <div class="col-md-6">
+                <label for="urun" class="form-label"> Ürün Adı</label>
+                <input type="text" class="form-control" id="urun" value="{{urun.urun}}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="inceleme" class="form-label">Ürün İncelemesi</label>
+                <input type="text" class="form-control" id="inceleme" value="{{urun.inceleme}}" readonly>
+            </div>
+     </form>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{%extends "master.html" %}
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% block baslik %} Yeni üye ekle {% endblock %}
+{% block govde %}
+     <form class="row g-3 pt-4" method="post" action="register" novalidate>
+         {% csrf_token %}
+         <div class="row justify-content-center">
+            <div class="col-5 ">
+                {{ form.as_p }}
+                <div class="col-12 pt-3">
+                    <button type="submit" class="btn btn-warning">Kayıt ol</button>
+                </div>
+            </div>
+         </div>
+     </form>
+{% endblock %}

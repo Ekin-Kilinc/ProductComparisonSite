@@ -1,0 +1,46 @@
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% load static %}
+{% block baslik %} Ürün Detayı {% endblock %}
+
+{% block govde %}
+<div class="container my-5">
+     <form class="row g-3 pt-4" method="post" action="" >
+            <div class="col-md-12">
+                <img src="{{urun.urunResmi}}" height="200px">
+            </div>
+
+            <div class="col-md-6">
+                <label for="ad" class="form-label"> Ürün Adı</label>
+                <input type="text" class="form-control" id="ad" value="{{urun.ad}}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="fiyat" class="form-label">Ürün Fiyatı</label>
+                <input type="text" class="form-control" id="fiyat" value="{{urun.fiyat}}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="urunno" class="form-label">Ürün No</label>
+                <input type="number" class="form-control" id="urunno" value="{{urun.urunno}}" readonly>
+            </div>
+            <div class="col-md-6">
+                <label for="urunaciklama" class="form-label">Ürün Açıklama</label>
+                <input type="number" class="form-control" id="urunaciklama" value="{{urun.urunaciklama}}" readonly>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    {% if urun.stokdurumu == True %}
+                        <input class="form-check-input" type="checkbox" checked readonly>
+                    {% else %}
+                        <input class="form-check-input" type="checkbox" readonly>
+                    {% endif %}
+                    <label class="form-check-label"> Stokta
+                    </label>
+                </div>
+            </div>
+     </form>
+</div>
+{% endblock %}
+

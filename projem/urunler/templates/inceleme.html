@@ -1,0 +1,40 @@
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block baslik %} Ürün İnceleme {% endblock %}
+
+{% block govde %}
+
+    <header class="container-fluid p-5 bg-secondary text-white text-center">
+        <h1>Ürün İnceleme</h1>
+    </header>
+
+    <div class="container mt-5">
+        <section id="product">
+            <h2>Ürün Adı</h2>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı 1</h5>
+                    <p class="card-text">Kaliteli ürün.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı 2</h5>
+                    <p class="card-text">Beklentilerimi karşılamadı.</p>
+                </div>
+            </div>
+            <button
+                <li class="nav-item">
+                        <a class="nav-link" href="/urunler/uruninceleme">İnceleme Ekle</a>
+                </li>
+            </button>
+        </section>
+    </div>
+
+{% endblock %}
+

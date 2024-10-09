@@ -1,0 +1,46 @@
+
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% load static %}
+{% block baslik %} Ürünler Listesi {% endblock %}
+
+{% block govde %}
+
+<div class="container-fluid p-5 bg-secondary text-white text-center">
+  <h1>Ürünler</h1>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="{% static 'siyahkalem.png' %}">
+        <div class="card-body">
+          <h5 class="card-title">Coated Classique Ballpoint Pen - Ballpoint pens</h5>
+          <p class="card-text">Fiyat: 99.99₺</p>
+          <a href="/urunler/incele/" class="btn btn-warning">İncelemeler</a>
+          <a href="/urunler/karsilastir/" class="btn btn-warning">Karşılaştır</a>
+          <a href="/urunler/sepet" class="btn btn-warning">Sepete Ekle</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="{% static 'beyazkalem.png' %}">
+        <div class="card-body">
+          <h5 class="card-title">Classic White Pen | Non-polymer coated</h5>
+          <p class="card-text">Fiyat: 149.99₺</p>
+          <a href="/urunler/incele/" class="btn btn-warning">İncelemeler</a>
+          <a href="/urunler/karsilastir/" class="btn btn-warning">Karşılaştır</a>
+          <a href="/urunler/sepet" class="btn btn-warning">Sepete Ekle</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

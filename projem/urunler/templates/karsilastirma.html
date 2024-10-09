@@ -1,0 +1,83 @@
+{%extends "master.html" %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% load static %}
+{% block baslik %} Ürün Karşılatırma {% endblock %}
+
+{% block govde %}
+
+    <header class="bg-secondary text-white text-center py-3">
+        <h1>Ürün Karşılaştırma</h1>
+    </header>
+    <section class="container mt-4">
+        <h2 class="mb-3">Ürün Karşılaştırma</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Classic White Pen | Non-polymer coated
+                    </div>
+                    <div class="card-body">
+                        <img width="300px" src="{% static 'beyazkalem.png' %}">
+                        <ul>
+                            <li><strong>Fiyat:</strong> 149.99₺</li>
+                            <li><strong>Özellik 1:</strong> AAAAA</li>
+                            <li><strong>Özellik 2:</strong> BBBBB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Coated Classique Ballpoint Pen - Ballpoint pens
+                    </div>
+                    <div class="card-body">
+                        <img width="300px" src="{% static 'siyahkalem.png' %}">
+                        <ul>
+                            <li><strong>Fiyat:</strong> 99.99₺</li>
+                            <li><strong>Özellik 1:</strong> CCCCCC</li>
+                            <li><strong>Özellik 2:</strong> DDDDDD</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Aurora Optima Black 14K Gold GT Fountain Pen 997-N
+                    </div>
+                    <div class="card-body">
+                        <img width="300px" src="{% static 'siyahkalem2.png' %}">
+                        <ul>
+                            <li><strong>Fiyat:</strong> 199.49₺</li>
+                            <li><strong>Özellik 1:</strong> EEEEEEE</li>
+                            <li><strong>Özellik 2:</strong> FFFFFFF</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Roller Pen Archives - Submarine Pens
+                    </div>
+                    <div class="card-body">
+                        <img width="300px" src="{% static 'kahverengikalem.jpg' %}">
+                        <ul>
+                            <li><strong>Fiyat:</strong> 357.99₺</li>
+                            <li><strong>Özellik 1:</strong> GGGGGGG</li>
+                            <li><strong>Özellik 2:</strong> HHHHHHH</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}

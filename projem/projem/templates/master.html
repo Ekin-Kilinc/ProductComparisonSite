@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block baslik %} {% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images.png' %}"  width="80">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Ana Sayfa</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Kategoriler
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Elektronik</a></li>
+                        <li><a class="dropdown-item" href="#">Giyim ve Moda</a></li>
+                        <li><a class="dropdown-item" href="#">Ev ve Bahçe</a></li>
+                        <li><a class="dropdown-item" href="#">Kırtasiye Ürünleri</a></li>
+                        <li><a class="dropdown-item" href="#">Makyaj Malzemeleri</a></li>
+                        <li><a class="dropdown-item" href="#">Kitaplar ve Eğitim</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/urunler/liste">Son Bakılan Ürünler</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/urunler/uruninceleme">İncelemeler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/urunler/sepet">Sepet</a>
+                </li>
+
+            </ul>
+            <span class="navbar-text me-4">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Ürün Ara" aria-label="Ürün Ara">
+                    <a class="btn btn-outline-warning" type="submit">Ara</a>
+                </form>
+            </span>
+
+            {% if user.is_authenticated %}
+                <span class="navbar-text me-4">
+                    <a href="#"> Hoşgeldin, {{user.username}}</a>
+                </span>
+                <span class="navbar-text me-4">
+                        <a href="../logout" class="btn btn-outline-warning">Çıkış Yap</a>
+                </span>
+            {% else %}
+                <span class="navbar-text me-4">
+                        <a href="../login" class="btn btn-outline-warning">Giriş Yap</a>
+                </span>
+                <span class="navbar-text me-4">
+                        <a href="../register" class="btn btn-outline-warning">Kayıt Ol</a>
+                </span>
+            {% endif %}
+
+        </div>
+    </div>
+</nav>
+
+{% block govde %}
+{% endblock %}
+
+
+</body>
+</html>
